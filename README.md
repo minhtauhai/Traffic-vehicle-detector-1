@@ -15,7 +15,8 @@
 **3. Requirements**
 
 Cài đặt các thư viện cần thiết:
-pip install -r requirements.txt
+     pip install -r requirements.txt
+
 
 Các công nghệ chính:
 
@@ -52,17 +53,18 @@ Thông tin huấn luyện:
 
 - Learning rate: 0.001
 
-Tích hợp CBAM vào YOLOv8 để tăng độ chính xác.
+- Tích hợp CBAM vào YOLOv8 để tăng độ chính xác.
 
-Chạy huấn luyện:
+- Chạy huấn luyện:
 
-- python train.py --img 640 --batch 16 --epochs 20 --data data.yaml --cfg yolo_cbam.yaml --weights yolov8n.pt --name yolo_cbam_traffic
+ python train.py --img 640 --batch 16 --epochs 20 --data data.yaml --cfg yolo_cbam.yaml --weights yolov8n.pt --name yolo_cbam_traffic
 Mô hình được lưu tại runs/train/yolo_cbam_traffic/weights/best.pt
 
 **6. Inference**
 Thực hiện dự đoán ảnh hoặc video:
 
 - python detect.py --weights runs/train/yolo_cbam_traffic/weights/best.pt --source path_to_image_or_video
+
 Kết quả sẽ hiển thị bounding boxes và nhãn phương tiện.
 
 **7. Model Architecture**
